@@ -1,33 +1,21 @@
 
-/**
- * Write a description of class ShowImage here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class ShowImage
-{
-    // instance variables - replace the example below with your own
-    private int x;
+import java.awt.*;
+import javax.swing.*;
 
-    /**
-     * Constructor for objects of class ShowImage
-     */
-    public ShowImage()
-    {
-        // initialise instance variables
-        x = 0;
+public class ShowImage extends JPanel {
+
+    public ShowImage() {
+        ImageIcon im = new ImageIcon("redball.png");
+        JLabel label = new JLabel(im);
+        add(label);
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    public static void main(String[] args) {
+        JFrame frame = new JFrame();
+        frame.add(new ShowImage());
+        frame.setVisible(true);
+        frame.setSize(400, 300);
+        frame.setPreferredSize(new Dimension(200, 300));
+    }    
+
 }
